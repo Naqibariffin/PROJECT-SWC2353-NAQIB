@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Manage Product</title>
+  <link rel="stylesheet" href="manageproduct.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!-- Header and Navigation -->
+<header>
+  <nav>
+    <img src="LOGO.png" alt="QibShop Logo" class="logo">
+    <ul class="menu">
+      <li><a href=><b>Home</b></a></li>
+      <li><a href="manageproduct.html"><b>Manage Product</b></a></li>
+	  <li><a href="manageorder.html"><b>Manage Order</b></a></li>
+	  
+    </ul>
+    <div class="user-icons">
+	  <a href="main.html" class="signout-button"><b>Sign Out</b></a>
+    </div>
+  </nav>
+</header>
+
+<!-- Manage Product Section -->
+<main>
+  <div class="manage-product-container">
+    <h1>Manage Products</h1>
+	 <br>
+    <a href="addproduct.html" class="add-product-btn">Add New Product</a>
+	<br><br>
+
+    <!-- Product Table -->
+    <div class="table-responsive">
+      <table class="product-table">
+        <thead>
+          <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+       <tbody>
+  <!-- Samsung Galaxy A06 (Android) -->
+  <tr>
+    <td>#001</td>
+    <td>Samsung Galaxy A06 LTE</td>
+    <td>Android</td>
+    <td>RM 449</td>
+    <td>Available</td>
+    <td>
+      <a href="editproduct.html" class="edit-btn"><i class="fas fa-edit"></i></a>
+      <button class="delete-btn" onclick="deleteProduct(this)"><i class="fas fa-trash"></i></button>
+    </td>
+  </tr>
+
+  <!-- HONOR Magic V3 (Android) -->
+  <tr>
+    <td>#002</td>
+    <td>HONOR Magic V3</td>
+    <td>Android</td>
+    <td>RM 5,999</td>
+    <td>Available</td>
+    <td>
+      <a href="editproduct.html" class="edit-btn"><i class="fas fa-edit"></i></a>
+      <button class="delete-btn" onclick="deleteProduct(this)"><i class="fas fa-trash"></i></button>
+    </td>
+  </tr>
+
+  <!-- Samsung Galaxy S24 FE 5G (Android) -->
+  <tr>
+    <td>#003</td>
+    <td>Samsung Galaxy S24 FE 5G</td>
+    <td>Android</td>
+    <td>RM 2,699</td>
+    <td>Available</td>
+    <td>
+      <a href="editproduct.html" class="edit-btn"><i class="fas fa-edit"></i></a>
+      <button class="delete-btn" onclick="deleteProduct(this)"><i class="fas fa-trash"></i></button>
+    </td>
+  </tr>
+
+  <!-- Realme C63 (Android) -->
+  <tr>
+    <td>#004</td>
+    <td>Realme C63</td>
+    <td>Android</td>
+    <td>RM 599</td>
+    <td>Available</td>
+    <td>
+      <a href="editproduct.html" class="edit-btn"><i class="fas fa-edit"></i></a>
+      <button class="delete-btn" onclick="deleteProduct(this)"><i class="fas fa-trash"></i></button>
+    </td>
+  </tr>
+
+  <!-- OPPO A60 (Android) (Sold Out) -->
+  <tr>
+    <td>#005</td>
+    <td>OPPO A60</td>
+    <td>Android</td>
+    <td>RM 799</td>
+    <td>Sold Out</td>
+    <td>
+      <a href="editproduct.html" class="edit-btn"><i class="fas fa-edit"></i></a>
+      <button class="delete-btn" onclick="deleteProduct(this)"><i class="fas fa-trash"></i></button>
+    </td>
+  </tr>
+
+  <!-- iPhone 16 (iPhone) -->
+  <tr>
+    <td>#006</td>
+    <td>iPhone 16</td>
+    <td>iPhone</td>
+    <td>RM 3,999</td>
+    <td>Available</td>
+    <td>
+      <a href="editproduct.html" class="edit-btn"><i class="fas fa-edit"></i></a>
+      <button class="delete-btn" onclick="deleteProduct(this)"><i class="fas fa-trash"></i></button>
+    </td>
+  </tr>
+
+  <!-- iPhone 15 Pro (iPhone) -->
+  <tr>
+    <td>#007</td>
+    <td>iPhone 15 Pro</td>
+    <td>iPhone</td>
+    <td>RM 4,499</td>
+    <td>Available</td>
+    <td>
+      <a href="editproduct.html" class="edit-btn"><i class="fas fa-edit"></i></a>
+      <button class="delete-btn" onclick="deleteProduct(this)"><i class="fas fa-trash"></i></button>
+    </td>
+  </tr>
+
+  <!-- iPhone 15 (iPhone) -->
+  <tr>
+    <td>#008</td>
+    <td>iPhone 15</td>
+    <td>iPhone</td>
+    <td>RM 3,499</td>
+    <td>Available</td>
+    <td>
+      <a href="editproduct.html" class="edit-btn"><i class="fas fa-edit"></i></a>
+      <button class="delete-btn" onclick="deleteProduct(this)"><i class="fas fa-trash"></i></button>
+    </td>
+  </tr>
+
+  <!-- iPhone 14 (iPhone) (Sold Out) -->
+  <tr>
+    <td>#009</td>
+    <td>iPhone 14</td>
+    <td>iPhone</td>
+    <td>RM 2,999</td>
+    <td>Sold Out</td>
+    <td>
+      <a href="editproduct.html" class="edit-btn"><i class="fas fa-edit"></i></a>
+      <button class="delete-btn" onclick="deleteProduct(this)"><i class="fas fa-trash"></i></button>
+    </td>
+  </tr>
+
+  <!-- iPhone SE (iPhone) -->
+  <tr>
+    <td>#010</td>
+    <td>iPhone SE</td>
+    <td>iPhone</td>
+    <td>RM 2,199</td>
+    <td>Available</td>
+    <td>
+      <a href="editproduct.html" class="edit-btn"><i class="fas fa-edit"></i></a>
+      <button class="delete-btn" onclick="deleteProduct(this)"><i class="fas fa-trash"></i></button>
+    </td>
+  </tr>
+
+  <!-- Acer Aspire Lite 16 (Laptop) -->
+  <tr>
+    <td>#011</td>
+    <td>Acer Aspire Lite 16</td>
+    <td>Laptop</td>
+    <td>RM 2,499</td>
+    <td>Available</td>
+    <td>
+      <a href="editproduct.html" class="edit-btn"><i class="fas fa-edit"></i></a>
+      <button class="delete-btn" onclick="deleteProduct(this)"><i class="fas fa-trash"></i></button>
+    </td>
+  </tr>
+
+  <!-- HP Victus Gaming 15 (Laptop) (Sold Out) -->
+  <tr>
+    <td>#012</td>
+    <td>HP Victus Gaming 15</td>
+    <td>Laptop</td>
+    <td>RM 2,959</td>
+    <td>Sold Out</td>
+    <td>
+      <a href="editproduct.html" class="edit-btn"><i class="fas fa-edit"></i></a>
+      <button class="delete-btn" onclick="deleteProduct(this)"><i class="fas fa-trash"></i></button>
+    </td>
+  </tr>
+
+  <!-- Acer Nitro V15 (Laptop) -->
+  <tr>
+    <td>#013</td>
+    <td>Acer Nitro V15</td>
+    <td>Laptop</td>
+    <td>RM 3,179</td>
+    <td>Available</td>
+    <td>
+      <a href="editproduct.html" class="edit-btn"><i class="fas fa-edit"></i></a>
+      <button class="delete-btn" onclick="deleteProduct(this)"><i class="fas fa-trash"></i></button>
+    </td>
+  </tr>
+
+  <!-- HP Omen Gaming 16 (Laptop) (Sale) -->
+  <tr>
+    <td>#014</td>
+    <td>HP Omen Gaming 16</td>
+    <td>Laptop</td>
+    <td>RM 5,299</td>
+    <td>Available</td>
+    <td>
+      <a href="editproduct.html" class="edit-btn"><i class="fas fa-edit"></i></a>
+      <button class="delete-btn" onclick="deleteProduct(this)"><i class="fas fa-trash"></i></button>
+    </td>
+  </tr>
+
+  <!-- Lenovo ThinkPad E16 Gen 1 (Laptop) -->
+  <tr>
+    <td>#015</td>
+    <td>Lenovo ThinkPad E16 Gen 1</td>
+    <td>Laptop</td>
+    <td>RM 4,419</td>
+    <td>Available</td>
+    <td>
+      <a href="editproduct.html" class="edit-btn"><i class="fas fa-edit"></i></a>
+      <button class="delete-btn" onclick="deleteProduct(this)"><i class="fas fa-trash"></i></button>
+    </td>
+  </tr>
+</tbody>
+
+      </table>
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer>
+  <p>© 2024 QIBSHOP. All rights reserved.</p>
+</footer>
+
+
+<script>
+  // Function to handle delete action
+  function deleteProduct(button) {
+    // Get the row of the product to be deleted
+    const productRow = button.closest('tr');
+
+    // Show a notification
+    const notification = document.createElement('div');
+    notification.className = 'delete-notification';
+    notification.innerHTML = 'Product deleted successfully!';
+    document.body.appendChild(notification);
+
+    // Hide the product row temporarily
+    productRow.style.display = 'none';
+
+    // Show the notification for 3 seconds before removing it
+    setTimeout(() => {
+      notification.style.display = 'none';
+    }, 3000);
+  }
+</script>
+
+</body>
+</html>

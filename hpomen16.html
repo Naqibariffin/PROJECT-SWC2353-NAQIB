@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HP Omen 16- QibShop</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="hpomen16.css">
+</head>
+<body>
+  <!-- Header and Navigation -->
+  <header>
+    <nav>
+      <img src="LOGO.png" alt="QibShop Logo" class="logo">
+      <ul class="menu">
+        <li><a href="main.html"><b>Home</b></a></li>
+        <li class="dropdown">
+          <a href=""><b>Shop</b></a>
+          <ul class="dropdown-content">
+            <li><a href="shopIphone.html">iPhone</a></li>
+            <li><a href="shopAndroid.html">Android</a></li>
+            <li><a href="shopLaptop.html">Laptop</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href=""><b>About Us</b></a>
+          <ul class="dropdown-content">
+            <li><a href="aboutus.html">Our Story & Team</a></li>
+            <li><a href="storelocation.html">Store Location</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href=""><b>Contact Us</b></a>
+          <ul class="dropdown-content">
+            <li><a href="faq.html">FAQ</a></li>
+            
+          </ul>
+        </li>
+      </ul>
+      
+      <!-- User Icons -->
+      <div class="user-icons">
+        <a href="signin.html"><i class="fas fa-user"></i></a> <!-- Sign-in icon -->
+        <a href="cart.html"><i class="fas fa-shopping-cart"></i></a> <!-- Cart icon -->
+      </div>
+    </nav>
+  </header>
+
+  <div class="product-section">
+    <div class="slider-section">
+      <div class="slider">
+        <div class="slides">
+          <div class="slide">
+            <img src="hpomen16(1).png" alt="HP Omen 16">
+          </div>
+          <div class="slide">
+            <img src="hpomen16(2).png" alt="HP Omen 16">
+          </div>
+          <div class="slide">
+            <img src="hpomen16(3).png" alt="HP Omen 16">
+          </div>
+          <div class="slide">
+            <img src="hpomen16(4).png" alt="HP Omen 16">
+          </div>
+        </div>
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+      </div>
+    </div>
+
+    <div class="product-info">
+      <h1>HP Omen 16 </h1>
+		<h2>⚡Features⚡</h2>
+		<p>- 16.1-inch QHD display</p>
+        <p>- NVIDIA GeForce RTX graphics</p>
+        <p>- Upgradable RAM Slot</p>
+      <span id="original-price" style="text-decoration: line-through; color: red;">RM 6799</span>
+      <div class="price" id="price">RM 5299</div>
+		
+	  <div class="quantity-selector">
+    <button onclick="changeQuantity(-1)">-</button>
+    <input type="number" id="quantity" value="1" min="1">
+    <button onclick="changeQuantity(1)">+</button>
+  </div>
+		
+      <br>
+      <button id="add-to-cart"><b>Add to Cart</b></button>
+    </div>
+	</div>
+	
+
+  <div class="submenu">
+  <ul>
+    <li><a href="#description">Description</a></li>
+    <li><a href="#specifications">Specifications</a></li>
+  </ul>
+</div>
+
+<!-- Description and Specifications Section -->
+<div class="description-specifications">
+  <!-- Description Section -->
+  <div id="description" class="description-box">
+    <h2>Description</h2>
+    <p>The HP Omen 16 is a powerful gaming laptop designed for immersive performance and cutting-edge graphics. Featuring a 16.1-inch QHD display with a 165 Hz refresh rate and a 3 ms response time, it delivers smooth visuals that enhance the gaming experience. Whether you're engaged in fast-paced action or graphically demanding tasks, the Omen 16 excels with its robust hardware options, including Intel's 14th generation processors or AMD Ryzen 9 processors, paired with NVIDIA GeForce RTX graphics.</p> 
+	<p>This laptop is equipped with advanced cooling technology to maintain performance during extended gaming sessions. The Omen Gaming Hub allows for performance optimization and customization to suit individual gaming styles. With high-speed RAM and ample SSD storage, the Omen 16 is built for multitasking and quick load times, ensuring that gamers stay ahead of the competition.</p>
+  </div>
+	
+  <br><hr>
+
+  <!-- Specifications Section -->
+  <div id="specifications" class="specifications-box">
+    <h2>Specifications</h2>
+    <ul>
+  <li><strong>Display:</strong> 16.1-inch QHD (2560 x 1600), 165 Hz, 3 ms response time, IPS</li>
+  <li><strong>Processor:</strong> Up to Intel® Core™ i7-13700H</li>
+  <li><strong>Graphics:</strong> Up to NVIDIA® GeForce RTX™ 3070 Ti (8 GB GDDR6) or AMD Radeon™ RX 6600M</li>
+  <li><strong>RAM:</strong> Up to 32 GB DDR5-4800 MHz</li>
+  <li><strong>Storage:</strong> Up to 1 TB PCIe® Gen4 NVMe™ SSD</li>
+  <li><strong>Operating System:</strong> Up to Windows 11 Home</li>
+  <li><strong>Battery:</strong> 4-cell, 70 Wh Li-ion with HP Fast Charge technology</li>
+  <li><strong>Connectivity:</strong> Wi-Fi 6E, Bluetooth 5.2, multiple USB ports, HDMI 2.1</li>
+  <li><strong>Audio:</strong> Bang & Olufsen dual speakers</li>
+  <li><strong>Weight:</strong> Approximately 2.2 kg (4.85 lbs)</li>
+  <li><strong>Colors:</strong> Shadow Black</li>
+</ul>
+  </div>
+</div>
+	
+<script>
+    let currentSlide = 0;
+
+    function changeSlide(direction) {
+        const slides = document.querySelector('.slides');
+        const totalSlides = document.querySelectorAll('.slide').length;
+
+        currentSlide += direction;
+
+        if (currentSlide < 0) {
+            currentSlide = totalSlides - 1; // Loop back to last slide
+        } else if (currentSlide >= totalSlides) {
+            currentSlide = 0; // Loop back to first slide
+        }
+
+        slides.style.transform = `translateX(-${currentSlide * 100}%)`; // Corrected template literal syntax
+    }
+
+
+	document.querySelectorAll('.submenu a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+	
+	function changeQuantity(amount) {
+  const quantityInput = document.getElementById('quantity');
+  let currentQuantity = parseInt(quantityInput.value);
+
+  // Adjust quantity
+  currentQuantity += amount;
+
+  // Ensure quantity is at least 1
+  if (currentQuantity < 1) {
+    currentQuantity = 1;
+  }
+
+  // Set new quantity
+  quantityInput.value = currentQuantity;
+}
+
+// Optional: Update the Add to Cart button to use quantity
+document.getElementById('add-to-cart').addEventListener('click', function () {
+  const quantity = document.getElementById('quantity').value;
+  alert(`Added ${quantity} HP Omen 16 to your cart!`);
+});
+	
+</script>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 QIBSHOP. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

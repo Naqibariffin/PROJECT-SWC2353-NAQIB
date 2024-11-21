@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Add New Product</title>
+  <link rel="stylesheet" href="addproduct.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!-- Header and Navigation -->
+<header>
+  <nav>
+    <img src="LOGO.png" alt="QibShop Logo" class="logo">
+    <ul class="menu">
+      <li><a href="adminprofile.html"><b>Home</b></a></li>
+      <li><a href="manageproduct.html"><b>Manage Product</b></a></li>
+	  <li><a href="manageorder.html"><b>Manage Order</b></a></li>
+      
+    </ul>
+    <div class="user-icons">
+	  <a href="main.html" class="signout-button"><b>Sign Out</b></a>
+    </div>
+  </nav>
+</header>
+
+  <div class="product-form-container">
+    <h1>Add New Product</h1>
+
+    <form id="add-product-form">
+      <label for="product-name">Product Name</label>
+      <input type="text" id="product-name" name="product-name" required>
+
+      <label for="product-description">Product Description</label>
+      <textarea id="product-description" name="product-description" required></textarea>
+
+      <label for="product-price">Price (RM)</label>
+      <input type="number" id="product-price" name="product-price" required>
+
+      <label for="product-stock">Stock Quantity</label>
+      <input type="number" id="product-stock" name="product-stock" required>
+
+      <label for="product-color">Select Color</label>
+      <select id="product-color" name="product-color">
+        <option value="Black Titanium">Black Titanium</option>
+        <option value="Natural Titanium">Natural Titanium</option>
+        <option value="White Titanium">White Titanium</option>
+        <option value="Desert Titanium">Desert Titanium</option>
+      </select>
+      <input type="text" id="new-color" placeholder="Add new color" aria-label="Add new color">
+
+      <label for="product-storage">Select Storage</label>
+      <select id="product-storage" name="product-storage">
+        <option value="128GB">128GB</option>
+        <option value="256GB">256GB</option>
+        <option value="512GB">512GB</option>
+      </select>
+      <input type="text" id="new-storage" placeholder="Add new storage option" aria-label="Add new storage option">
+
+      <label for="product-image">Product Image</label>
+      <input type="file" id="product-image" name="product-image" accept="image/*" required>
+
+      <!-- Image Preview -->
+      <div id="image-preview-container">
+        <!-- Image preview will appear here -->
+      </div>
+
+      <button type="submit">Add Product</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>© 2024 QIBSHOP. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Handling form submission
+    document.getElementById('add-product-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      // Collect form data
+      const productName = document.getElementById('product-name').value;
+      const productDescription = document.getElementById('product-description').value;
+      const productPrice = document.getElementById('product-price').value;
+      const productStock = document.getElementById('product-stock').value;
+      const productColor = document.getElementById('product-color').value;
+      const productStorage = document.getElementById('product-storage').value;
+
+      const productImageInput = document.getElementById('product-image');
+      const productImage = productImageInput.files.length > 0 ? productImageInput.files[0] : null;
+
+      // Get any new colors or storage options added by the user
+      const newColor = document.getElementById('new-color').value;
+      const newStorage = document.getElementById('new-storage').value;
+
+      // If a new color is entered, add it to the select list
+      if (newColor && !Array.from(document.getElementById('product-color').options).some(option => option.value === newColor)) {
+        const newOption = document.createElement('option');
+        newOption.value = newColor;
+        newOption.textContent = newColor;
+        document.getElementById('product-color').appendChild(newOption);
+      }
+
+      // If a new storage is entered, add it to the select list
+      if (newStorage && !Array.from(document.getElementById('product-storage').options).some(option => option.value === newStorage)) {
+        const newOption = document.createElement('option');
+        newOption.value = newStorage;
+        newOption.textContent = newStorage;
+        document.getElementById('product-storage').appendChild(newOption);
+      }
+
+      // Validation: Check if all fields are filled
+      if (productName && productDescription && productPrice && productStock && productColor && productStorage && productImage) {
+        // For now, log the product details (you can send this to a backend later)
+        console.log({
+          productName,
+          productDescription,
+          productPrice,
+          productStock,
+          productColor,
+          productStorage,
+          productImage: productImage.name // Display only the image name
+        });
+
+        alert('Product added successfully!');
+        window.location.href = 'manageproduct.html'; 
+      } else {
+        alert('Please fill all fields.');
+      }
+    });
+
+    // Optional: Display a preview of the selected image
+    document.getElementById('product-image').addEventListener('change', function (event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const imagePreview = document.createElement('img');
+          imagePreview.src = e.target.result;
+          imagePreview.alt = 'Product Image Preview';
+          imagePreview.style.maxWidth = '200px';
+          imagePreview.style.marginTop = '10px';
+
+          // Remove any previous image preview
+          const previousPreview = document.querySelector('.image-preview');
+          if (previousPreview) {
+            previousPreview.remove();
+          }
+
+          imagePreview.classList.add('image-preview');
+          document.getElementById('image-preview-container').appendChild(imagePreview);
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
+
+</body>
+</html>

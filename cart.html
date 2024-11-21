@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - QibShop</title> 
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!-- Header and Navigation -->
+<header>
+    <nav>
+        <img src="LOGO.png" alt="QibShop Logo" class="logo">
+        <ul class="menu">
+            <li><a href="main.html"><b>Home</b></a></li>
+            <li class="dropdown">
+                <a href=""><b>Shop</b></a>
+                <ul class="dropdown-content">
+                    <li><a href="shopIphone.html">Iphone</a></li>
+                    <li><a href="shopAndroid.html">Android</a></li>
+                    <li><a href="shopLaptop.html">Laptop</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href=""><b>About Us</b></a>
+                <ul class="dropdown-content">
+                    <li><a href="aboutus.html">Our Story & Team</a></li>
+                    <li><a href="storelocation.html">Store Location</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href=""><b>Contact Us</b></a>
+                <ul class="dropdown-content">
+                    <li><a href="faq.html">FAQ</a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+
+        <!-- User Icons -->
+        <div class="user-icons">
+            <a href="signin.html"><i class="fas fa-user"></i></a>
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </nav>
+</header>
+
+<div class="cart-container">
+    <h1>My Shopping Cart 🛒</h1>
+
+    <!-- iPhone 16 Item -->
+    <div id="cart-item-1" class="cart-item">
+        <img src="iphone16teal.webp" alt="iPhone 16 - Teal" class="cart-item-image">
+        <div class="cart-item-details">
+            <h2>iPhone 16 - Teal (512GB)</h2>
+            <p class="description">The latest iPhone 16 in stunning teal color with 512GB storage, perfect for all your apps and media.</p>
+            <p class="quantity">Quantity: <span class="quantity-value">1</span></p>
+            <p class="price">RM 4699.00</p>
+            <button class="button edit-button" onclick="openEditModal('cart-item-1')"><i class="fas fa-pencil-alt"></i> Edit</button>
+            <button class="button delete-button" onclick="deleteItem('cart-item-1')"><i class="fas fa-trash"></i> Delete</button>
+        </div>
+    </div>
+
+    <!-- HP Omen 16 Item -->
+    <div id="cart-item-2" class="cart-item">
+        <img src="hpomen16(5).avif" alt="HP Omen 16 Laptop" class="cart-item-image">
+        <div class="cart-item-details">
+            <h2>HP Omen 16</h2>
+            <p class="description">Experience high-performance gaming with the HP Omen 16, featuring a powerful GPU and sleek design.</p>
+            <p class="quantity">Quantity: <span class="quantity-value">1</span></p>
+            <p class="price" style="text-decoration: line-through; color: red;">RM 6799.99</p>
+            <p class="price">RM 5299.00</p>
+            <button class="button edit-button" onclick="openEditModal('cart-item-2')"><i class="fas fa-pencil-alt"></i> Edit</button>
+            <button class="button delete-button" onclick="deleteItem('cart-item-2')"><i class="fas fa-trash"></i> Delete</button>
+        </div>
+    </div>
+
+    <div class="cart-summary">
+        <div>Total:</div>
+        <div id="total-price">RM 9998.00</div>
+    </div>
+
+    <div class="shipping-summary">
+        <div>Shipping:</div>
+        <div>RM 20.00</div>
+    </div>
+
+    <div class="grand-total">
+        <div>Grand Total:</div>
+        <div id="grand-total">RM 10018.00</div>
+    </div>
+	
+	 <a href="main.html" class="button">Continue Shopping</a>
+    <a href="checkout.html" class="button">Proceed to Checkout</a>
+</div>
+
+<!-- Modal for Edit Item -->
+<div id="edit-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeEditModal()">&times;</span>
+        <h2>Edit Item</h2>
+        <p>Change the quantity:</p>
+        <input type="number" id="edit-quantity" min="1" value="1">
+        <button class="button" onclick="updateCartItem()">Update Cart</button>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2024 QibShop. All rights reserved.</p>
+</footer>
+
+<script>
+    function openEditModal(itemId) {
+        document.getElementById('edit-modal').style.display = "block";
+        // Store the item ID in a global variable or pass the item's details
+        window.currentItem = itemId;
+    }
+
+    function closeEditModal() {
+        document.getElementById('edit-modal').style.display = "none";
+    }
+
+    function updateCartItem() {
+        const quantity = document.getElementById('edit-quantity').value;
+        const item = document.getElementById(window.currentItem);
+        const price = item.querySelector('.price').innerText.replace('RM ', '');
+        const newPrice = parseFloat(price) * quantity;
+
+        item.querySelector('.quantity-value').innerText = quantity;
+        item.querySelector('.price').innerText = 'RM ' + newPrice.toFixed(2);
+
+        // Update Total Price
+        updateTotalPrice();
+        closeEditModal();
+    }
+
+    function deleteItem(itemId) {
+        const item = document.getElementById(itemId);
+        item.remove();
+        updateTotalPrice();
+    }
+
+    function updateTotalPrice() {
+        let totalPrice = 0;
+        const items = document.querySelectorAll('.cart-item');
+
+        items.forEach(item => {
+            const price = item.querySelector('.price').innerText.replace('RM ', '');
+            totalPrice += parseFloat(price);
+        });
+
+        const shipping = 20.00;
+        const grandTotal = totalPrice + shipping;
+
+        document.getElementById('total-price').innerText = 'RM ' + totalPrice.toFixed(2);
+        document.getElementById('grand-total').innerText = 'RM ' + grandTotal.toFixed(2);
+    }
+</script>
+
+</body>
+</html>

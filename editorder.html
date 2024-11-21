@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Edit Order</title>
+  <link rel="stylesheet" href="editorder.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!-- Header and Navigation -->
+<header>
+  <nav>
+    <img src="LOGO.png" alt="QibShop Logo" class="logo">
+    <ul class="menu">
+      <li><a href="adminprofile.html"><b>Home</b></a></li>
+      <li><a href="manageproduct.html"><b>Manage Product</b></a></li>
+      <li><a href="manageorder.html"><b>Manage Order</b></a></li>
+    </ul>
+    <div class="user-icons">
+      <a href="main.html" class="signout-button"><b>Sign Out</b></a>
+    </div>
+  </nav>
+</header>
+
+<!-- Edit Order Section -->
+<main>
+  <div class="edit-order-container">
+    <h1>Edit Order</h1>
+    <form class="edit-order-form" action="updateorder.html" method="POST" onsubmit="handleOrderUpdate(event)">
+      
+      <!-- Order ID (Hidden) -->
+      <input type="hidden" name="order-id" value="#1002">
+      
+      <label for="customer-name">Customer Name:</label>
+      <input type="text" id="customer-name" name="customer-name" value="Nurathrisha Elisa" required>
+
+      <label for="product-name">Product Name:</label>
+      <input type="text" id="product-name" name="product-name" value="iPhone 16" required>
+
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" value="2" required>
+
+      <label for="order-total">Order Total (RM):</label>
+      <input type="number" id="order-total" name="total" value="7998" required>
+
+      <label for="order-status">Order Status:</label>
+      <select id="order-status" name="status" required>
+        <option value="Pending">Pending</option>
+        <option value="Shipped" selected>Shipped</option>
+        <option value="Delivered">Delivered</option>
+        <option value="Cancelled">Cancelled</option>
+      </select>
+
+      <label for="order-date">Order Date:</label>
+      <input type="date" id="order-date" name="date" value="2024-11-14" required>
+
+      <button type="submit" class="update-btn">Update Order</button>
+    </form>
+  </div>
+</main>
+
+<script>
+  // Function to handle update action
+function handleOrderUpdate(event) {
+  event.preventDefault(); // Prevent the form from submitting normally
+
+  // Show a notification
+  const notification = document.createElement('div');
+  notification.className = 'update-notification';
+  notification.innerHTML = 'Order updated successfully! Redirecting...';
+  document.body.appendChild(notification);
+
+  // Display the notification
+  setTimeout(() => {
+    notification.classList.add('show'); // Add class to make the notification visible
+  }, 100);
+
+  // Show the notification for 3 seconds before redirecting
+  setTimeout(() => {
+    notification.style.display = 'none';
+    window.location.href = 'manageorder.html'; // Redirect to manageorder.html
+  }, 3000);
+}
+</script>
+
+<!-- Footer -->
+<footer>
+  <p>© 2024 QIBSHOP. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

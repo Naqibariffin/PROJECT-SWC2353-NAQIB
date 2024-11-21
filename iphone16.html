@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iPhone 16 - QibShop</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="iphone16.css">
+</head>
+<body>
+  <!-- Header and Navigation -->
+  <header>
+    <nav>
+      <img src="LOGO.png" alt="QibShop Logo" class="logo">
+      <ul class="menu">
+        <li><a href="main.html"><b>Home</b></a></li>
+        <li class="dropdown">
+          <a href=""><b>Shop</b></a>
+          <ul class="dropdown-content">
+            <li><a href="shopIphone.html">iPhone</a></li>
+            <li><a href="shopAndroid.html">Android</a></li>
+            <li><a href="shopLaptop.html">Laptop</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href=""><b>About Us</b></a>
+          <ul class="dropdown-content">
+            <li><a href="aboutus.html">Our Story & Team</a></li>
+            <li><a href="storelocation.html">Store Location</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href=""><b>Contact Us</b></a>
+          <ul class="dropdown-content">
+            <li><a href="faq.html">FAQ</a></li>
+            
+          </ul>
+        </li>
+      </ul>
+      
+      <!-- User Icons -->
+      <div class="user-icons">
+        <a href="signin.html"><i class="fas fa-user"></i></a> <!-- Sign-in icon -->
+        <a href="cart.html"><i class="fas fa-shopping-cart"></i></a> <!-- Cart icon -->
+      </div>
+    </nav>
+  </header>
+
+  <div class="product-section">
+    <div class="slider-section">
+      <div class="slider">
+        <div class="slides">
+          <div class="slide">
+            <img src="iphone16(1).png" alt="iPhone 16">
+          </div>
+          <div class="slide">
+            <img src="iphone16(2).webp" alt="iPhone 16">
+          </div>
+          <div class="slide">
+            <img src="iphone16(3).webp" alt="iPhone 16">
+          </div>
+          <div class="slide">
+            <img src="iphone16(4).webp" alt="iPhone 16">
+          </div>
+          <div class="slide">
+            <img src="iphone16(5).webp" alt="iPhone 16">
+          </div>
+		  <div class="slide">
+            <img src="iphone16(6).webp" alt="iPhone 16">
+          </div>
+        </div>
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+      </div>
+    </div>
+
+    <div class="product-info">
+      <h1>iPhone 16 </h1>
+      <div class="price" id="price">RM 3999.99</div>
+
+      <h2>Select Color:</h2>
+      <p id="selected-color">Selected Color: None</p>
+      <div class="color-options">
+        <button class="color-button" data-color="Ultramarine" style="background-color: cornflowerblue;" onclick="selectColor('Ultramarine', 3999.99)"></button>
+        <button class="color-button" data-color="Teal" style="background-color: teal;" onclick="selectColor('Teal', 3999.99)"></button>
+        <button class="color-button" data-color="Pink" style="background-color: hotpink;" onclick="selectColor('Pink', 3999.99)"></button>
+        <button class="color-button" data-color="White" style="background-color: whitesmoke;" onclick="selectColor('White', 3999.99)"></button>
+		<button class="color-button" data-color="Black" style="background-color: black;" onclick="selectColor('Black', 3999.99)"></button>
+      </div>
+	
+
+      <h2>Select Storage:</h2>
+      <p id="selected-storage">Selected Storage:None</p>
+      <div class="storage-options">
+        <button class="storage-button" data-gb="128GB" onclick="selectGB('128GB', 3999.99)">128GB</button>
+        <button class="storage-button" data-gb="256GB" onclick="selectGB('256GB', 4299.99)">256GB</button>
+        <button class="storage-button" data-gb="512GB" onclick="selectGB('512GB', 4699.99)">512GB</button>
+      </div>
+		
+		  <div class="quantity-selector">
+    <button onclick="changeQuantity(-1)">-</button>
+    <input type="number" id="quantity" value="1" min="1">
+    <button onclick="changeQuantity(1)">+</button>
+  </div>
+
+      <button id="add-to-cart"><b>Add to Cart</b></button>
+    </div>
+	</div>
+	
+
+  <div class="submenu">
+  <ul>
+    <li><a href="#description">Description</a></li>
+    <li><a href="#specifications">Specifications</a></li>
+	<li><a href="#whats-in-the-box">What's in the box</a></li>
+  </ul>
+</div>
+
+<!-- Description and Specifications Section -->
+<div class="description-specifications">
+  <!-- Description Section -->
+  <div id="description" class="description-box">
+    <h2>Description</h2>
+    <p>The iPhone 16 is designed for those who seek cutting-edge technology combined with sleek design. Featuring a stunning 6.7-inch Super Retina XDR display, every detail comes to life with remarkable clarity. Powered by the advanced A17 Bionic chip, the iPhone 16 delivers top-tier performance, whether you're multitasking, gaming, or capturing photos with its enhanced camera system.</p> 
+	<p>Built to last, the iPhone 16 is crafted with a robust Titanium frame and a durable Ceramic Shield front cover, offering both beauty and strength. With 5G connectivity, extended battery life, and water resistance, the 
+	iPhone 16 offers a seamless experience. Experience iOS 18 like never before with the iPhone 16 – where innovation meets elegance.</p>
+  </div>
+	
+  <br><hr>
+
+  <!-- Specifications Section -->
+  <div id="specifications" class="specifications-box">
+    <h2>Specifications</h2>
+    <ul>
+  <li><strong>Display:</strong> 6.7-inch Super Retina XDR with ProMotion</li>
+  <li><strong>Processor:</strong> A17 Bionic chip with 6-core CPU and 6-core GPU</li>
+  <li><strong>Camera System:</strong> 48 MP Main, 12 MP Ultra-wide, 12 MP Telephoto</li>
+  <li><strong>Battery Life:</strong> Up to 28 hours of talk time</li>
+  <li><strong>Storage Options:</strong> 128GB, 256GB, 512GB, 1TB</li>
+  <li><strong>Connectivity:</strong> 5G (sub-6GHz and mmWave), Wi-Fi 6E, Bluetooth 5.3</li>
+  <li><strong>Materials:</strong> Titanium frame, Ceramic Shield front cover</li>
+  <li><strong>Water Resistance:</strong> IP68 (up to 6 meters for 30 minutes)</li>
+  <li><strong>Operating System:</strong> iOS 18</li>
+    </ul>
+  </div>
+  <br><hr><br>
+	
+  <div id="whats-in-the-box" class="whats-in-the-box">
+	<img src="iphone16(7).webp" alt="iPhone 16">
+	</div>
+</div>
+	
+<script>
+    let currentSlide = 0;
+
+    // Mapping of colors to image filenames
+    const colorImageMap = {
+        'Ultramarine': 'iphone16(2).webp',
+		'Teal': 'iphone16(3).webp',
+		'Pink': 'iphone16(4).webp',
+		'White': 'iphone16(5).webp',
+		'Black': 'iphone16(6).webp'
+    };
+
+    function changeSlide(direction) {
+        const slides = document.querySelector('.slides');
+        const totalSlides = document.querySelectorAll('.slide').length;
+
+        currentSlide += direction;
+
+        if (currentSlide < 0) {
+            currentSlide = totalSlides - 1; // Loop back to last slide
+        } else if (currentSlide >= totalSlides) {
+            currentSlide = 0; // Loop back to first slide
+        }
+
+        slides.style.transform = `translateX(-${currentSlide * 100}%)`; // Corrected template literal syntax
+    }
+
+    // Function to select color and update price and image
+    function selectColor(color, price) {
+        document.getElementById('selected-color').innerText = `Selected Color: ${color}`;
+        document.getElementById('price').innerText = `RM ${price.toFixed(2)}`;
+
+        // Update the main image displayed in the slider based on the selected color
+        const mainImage = document.querySelector('.slides .slide img'); // Target the main image in the slider
+        mainImage.src = colorImageMap[color]; // Update the image source based on the selected color
+    }
+
+
+    // Function to select storage and update price
+    function selectGB(gb, price) {
+        document.getElementById('selected-storage').innerText = `Selected Storage: ${gb}`;
+        document.getElementById('price').innerText = `RM ${price.toFixed(2)}`;
+    }
+	
+	document.querySelectorAll('.submenu a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+	
+	function changeQuantity(amount) {
+  const quantityInput = document.getElementById('quantity');
+  let currentQuantity = parseInt(quantityInput.value);
+
+  // Adjust quantity
+  currentQuantity += amount;
+
+  // Ensure quantity is at least 1
+  if (currentQuantity < 1) {
+    currentQuantity = 1;
+  }
+
+  // Set new quantity
+  quantityInput.value = currentQuantity;
+}
+
+// Optional: Update the Add to Cart button to use quantity
+document.getElementById('add-to-cart').addEventListener('click', function () {
+  const quantity = document.getElementById('quantity').value;
+  alert(`Added ${quantity} Iphone 16 to your cart!`);
+});
+	
+</script>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 QIBSHOP. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - QibShop</title> 
+    <link rel="stylesheet" href="signup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>	
+
+ <!-- Header and Navigation -->
+<header>
+  <nav>
+    <img src="LOGO.png" alt="QibShop Logo" class="logo">
+    <ul class="menu">
+      <li><a href="main.html"><b>Home</b></a></li>
+      <li class="dropdown">
+        <a href=""><b>Shop</b></a>
+        <ul class="dropdown-content">
+          <li><a href="shopIphone.html">Iphone</a></li>
+          <li><a href="shopAndroid.html">Android</a></li>
+          <li><a href="shopLaptop.html">Laptop</a></li>
+        </ul>
+      </li>
+	  <li class="dropdown">
+        <a href=""><b>About Us</b></a>
+        <ul class="dropdown-content">
+          <li><a href="aboutus.html">Our Story & Team</a></li>
+          <li><a href="storelocation.html">Store Location</a></li>
+        </ul>
+      </li>
+	  <li class="dropdown">
+        <a href=""><b>Contact Us </b></a>
+        <ul class="dropdown-content">
+          <li><a href="faq.html">FAQ</a></li>
+          
+        </ul>
+      </li>
+    </ul>
+    
+    <!-- User Icons -->
+    <div class="user-icons">
+      <a href="signin.html"><i class="fas fa-user"></i></a> <!-- Sign-in icon -->
+      <a href="cart.html"><i class="fas fa-shopping-cart"></i></a> <!-- Cart icon -->
+    </div>
+  </nav>
+</header>
+	
+<!-- Centered Sign-Up Form -->
+<div class="center-container">
+    <div class="wrapper">
+      <h2>New Customer Sign Up&nbsp;</h2> <!-- Sign-up heading -->
+      <form action="signin.html"> <!-- Redirects to signin.html upon form submission -->
+        <!-- Name Input -->
+        <div class="input-box">
+          <input type="text" placeholder="Enter your name" required>
+        </div>
+        <br>
+
+        <!-- Email Input -->
+        <div class="input-box">
+          <input type="email" placeholder="Enter your email" required>
+        </div>
+        <br>
+
+        <!-- Password Input -->
+        <div class="input-box">
+          <input type="password" placeholder="Create password" required>
+        </div>
+        <br>
+
+        <!-- Confirm Password Input -->
+        <div class="input-box">
+          <input type="password" placeholder="Confirm password" required>
+        </div>
+        <br>
+
+        <!-- Terms and Conditions -->
+        <div class="policy">
+          <input type="checkbox" required>
+          <h3>I accept all terms & conditions</h3>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="input-box button">
+          <input type="submit" value="Register Now">
+        </div>
+
+        <!-- Link to Login Page -->
+        <div class="text">
+          <h3>Already have an account? <a href="signin.html">Login now</a></h3>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
+
+<!-- Footer -->
+<footer>
+  <p>© 2024 QIBSHOP. All rights reserved.</p> <!-- Footer content -->
+</footer>

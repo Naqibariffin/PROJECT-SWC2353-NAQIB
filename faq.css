@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #ffffff;
+  border-bottom: 2px solid #ddd;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.logo {
+  width: 150px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #007BFF;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ddd;
+  min-width: 160px;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.search-bar input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+}
+
+.user-icons a {
+  margin-left: 15px;
+  color: #333;
+  text-decoration: none;
+}
+
+.user-icons a:hover {
+  color: #007BFF;
+}
+
+.user-icons i {
+  font-size: 20px;
+}
+
+.faqs-container {
+  font-family: "Roboto", sans-serif;
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faqs-container h2 {
+  padding: 0 px 32px;
+  font-size: 28px;
+  text-align: center;
+}
+
+.faqs-container .faq-header {
+  display: flex;
+  background-color: white;
+  color: black;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s;
+  border: 2px solid black;
+}
+
+.faqs-container .faq-header:hover {
+  background-color: #0056b3;
+  color: white;
+  transform: scale(1.02);
+}
+
+.faqs-container .faq-header .open,
+.faqs-container .faq-header .close {
+  position: absolute;
+  right: 0;
+  padding: 0 32px;
+  font-size: 15px;
+  font-weight: bold;
+  transform: translateY(-8px);
+  opacity: 0;
+  transition: all 500ms;
+}
+
+.faqs-container .faq-header .open.active,
+.faqs-container .faq-header .close.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.faqs-container .faq-header h3 {
+  font-size: 15px;
+  padding: 0 20px;
+}
+
+.faqs-container .content {
+  padding: 0 32px;
+  background: #fdfffc;
+  line-height: 2;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 500ms ease-in-out;
+  border: 2px solid black;
+  border-radius: 8px;
+}
+
+.faqs-container .content.active {
+  max-height: 600px;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}

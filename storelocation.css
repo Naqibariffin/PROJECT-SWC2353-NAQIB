@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #ffffff;
+  border-bottom: 2px solid #ddd;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.logo {
+  width: 150px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #007BFF;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ddd;
+  min-width: 160px;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.search-bar input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+}
+
+.user-icons a {
+  margin-left: 15px;
+  color: #333;
+  text-decoration: none;
+}
+
+.user-icons a:hover {
+  color: #007BFF;
+}
+
+.user-icons i {
+  font-size: 20px;
+}
+
+/* Container for store list and map */
+
+#store-location h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.store-map-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 0px 30px 50px 30px;
+}
+
+.store-list {
+  flex: 1;
+  max-width: 50%;
+  margin-bottom: 20px;
+}
+
+.store-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.store-list li {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 15px;
+}
+
+.store-list h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.5em;
+}
+
+.store-list p {
+  margin: 5px 0;
+}
+
+.store-list a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.store-list a:hover {
+  text-decoration: underline;
+}
+
+/* Map container styling */
+.map-container {
+  flex: 1;
+  max-width: 50%;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.map-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.map-container iframe {
+  border-radius: 10px;
+  width: 100%;
+  height: 500px;
+  border: none;
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+  .store-map-container {
+    flex-direction: column;
+  }
+
+  .store-list, .map-container {
+    max-width: 100%;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

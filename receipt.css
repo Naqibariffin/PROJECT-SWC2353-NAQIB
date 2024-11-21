@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #ffffff;
+    border-bottom: 2px solid #ddd;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    width: 150px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.menu li a:hover {
+    color: #007BFF;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    min-width: 160px;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li {
+    list-style: none;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.search-bar input {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+
+.user-icons a {
+    margin-left: 15px;
+    color: #333;
+    text-decoration: none;
+}
+
+.user-icons a:hover {
+    color: #007BFF;
+}
+
+.user-icons i {
+    font-size: 20px;
+}
+
+.back-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 14px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border: 1px solid #007bff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Receipt Container */
+.receipt-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Receipt Header */
+.receipt-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.receipt-header h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+.receipt-header p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Receipt Details */
+.receipt-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.receipt-details .detail {
+    flex: 1;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    margin: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.receipt-details .detail h3 {
+    text-align: center;
+    font-size: 1.3em;
+    color: #333;
+}
+
+.receipt-details .detail ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.receipt-details .detail ul li {
+    font-size: 1.1em;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.receipt-details .detail ul li span {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Receipt Summary */
+.receipt-summary {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.receipt-summary h2 {
+    font-size: 1.6em;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.receipt-summary .summary-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.receipt-summary .summary-item.total {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+.receipt-summary .summary-item span {
+    color: #555;
+}
+
+/* Button */
+.button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    text-align: center;
+    display: block;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }

@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #ffffff;
+  border-bottom: 2px solid #ddd;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.logo {
+  width: 150px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #007BFF;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ddd;
+  min-width: 160px;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.search-bar input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+}
+
+.user-icons a {
+  margin-left: 15px;
+  color: #333;
+  text-decoration: none;
+}
+
+.user-icons a:hover {
+  color: #007BFF;
+}
+
+.user-icons i {
+  font-size: 20px;
+}
+
+/* Profile Container */
+.profile-container {
+  display: flex;
+  max-width: 800px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar {
+  width: 200px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-right: 2px solid #ddd;
+  text-align: left;
+}
+
+.sidebar button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.sidebar button:hover {
+  background-color: #0056b3;
+}
+
+.profile-section {
+  flex: 1;
+  padding: 20px;
+}
+
+.profile-info {
+  margin-bottom: 15px;
+}
+
+.profile-info label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+button {
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+#edit-button {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  border: solid black;
+}
+
+#save-button {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  border: solid black;
+}
+
+/* My Orders List */
+.order-list {
+  list-style: none;
+  padding: 0;
+}
+
+.order-list li {
+  font-size: 16px;
+  color: #333;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Footer */
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}

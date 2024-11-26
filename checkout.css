@@ -1,0 +1,243 @@
+/* Styles for checkout.css */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #ffffff;
+    border-bottom: 2px solid #ddd;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    width: 150px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.menu li a:hover {
+    color: #007BFF;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    min-width: 160px;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li {
+    list-style: none;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.search-bar input {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+
+.user-icons a {
+    margin-left: 15px;
+    color: #333;
+    text-decoration: none;
+}
+
+.user-icons a:hover {
+    color: #007BFF;
+}
+
+.user-icons i {
+    font-size: 20px;
+}
+
+.back-button {
+        display: inline-block;
+        margin-bottom: 20px;
+        font-size: 14px;
+        background-color: white;
+  color: black;       text-decoration: none;
+        border: 1px solid #007bff;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    .back-button:hover {
+        background-color: #0056b3;
+  color: white;
+    }
+/* Checkout Container */
+.checkout-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Checkout Content */
+.checkout-content {
+    display: flex;
+    gap: 50px; /* More spacing between boxes */
+    flex-wrap: wrap;
+}
+
+/* Order Summary */
+.order-summary {
+    width: 100%;
+    max-width: 600px; /* Keep the width */
+    padding: 20px;
+    border: 2px solid #ddd; /* Border */
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin: auto; /* Center the box */
+}
+
+.order-summary h2 {
+    font-size: 1.6em;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1em;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.summary-item.total {
+    font-weight: bold;
+    color: #007BFF;
+    font-size: 1.1em;
+}
+
+.summary-item span {
+    color: #555;
+}
+
+/* Billing Information and Payment Summary */
+.billing-info, .payment-summary {
+    flex: 1;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border: 2px solid #ddd; /* Added border */
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.6em;
+    color: #333;
+    text-align: center;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.payment-options .form-group {
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    width: 100%;
+    padding: 12px;
+    background-color: #C0C0C0;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+	color:white;
+}
+
+/* Footer */
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }

@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f0f0f5; /* Light gray background */
+  color: #333;
+}
+
+header {
+  background-color: #fff;
+  border-bottom: 2px solid #ddd;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.logo {
+  width: 150px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #007BFF;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ddd;
+  min-width: 160px;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.search-bar input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+}
+
+.user-icons a {
+  margin-left: 15px;
+  color: #333;
+  text-decoration: none;
+}
+
+.user-icons a:hover {
+  color: #007BFF;
+}
+
+.user-icons i {
+  font-size: 20px;
+}
+
+/* Slider Styles */
+.product-banner {
+  position: relative;
+  background-color: #f7f7f9;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  margin-bottom: 40px;
+}
+
+.slider {
+  position: relative;
+  width: 70%;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.slide {
+  display: none;
+  width: 100%;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slider-navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.slider-navigation .prev, .slider-navigation .next {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  color: white;
+  font-size: 24px;
+  border-radius: 50%;
+}
+
+.slider-navigation .prev:hover, .slider-navigation .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Section Title */
+h1 {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 2.5rem;
+  color: #007BFF;
+}
+
+/* Products Section */
+.products-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.product-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 25px;
+  width: 30%;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.product-info {
+  margin-top: 15px;
+}
+
+.new-badge {
+  background-color: #ff6600;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #007BFF;
+}
+
+.buy-btn {
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+  border: 2px solid black;
+  display: inline-block;
+  text-decoration:none;
+}
+
+
+
+.buy-btn:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: #ddd;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 0.9em;
+}
+
+footer p {
+  margin: 0;
+}
+
+.pic {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  background-color: #f7f7f9;
+  color: white;
+  text-align: center;
+  padding: 20px 1px ;
+  margin-bottom: 40px;
+}
+
+.pic video{
+	border-radius: 20px;
+}
+

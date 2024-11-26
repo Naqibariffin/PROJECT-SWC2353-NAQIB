@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt - QibShop</title>
+    <link rel="stylesheet" href="receipt.css"> <!-- Link to CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!-- Header and Navigation -->
+<header>
+    <nav>
+        <img src="LOGO.png" alt="QibShop Logo" class="logo">
+        <ul class="menu">
+            <li><a href="main.html"><b>Home</b></a></li>
+            <li class="dropdown">
+                <a href="#"><b>Shop</b></a>
+                <ul class="dropdown-content">
+                    <li><a href="shopIphone.html">Iphone</a></li>
+                    <li><a href="shopAndroid.html">Android</a></li>
+                    <li><a href="shopLaptop.html">Laptop</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#"><b>About Us</b></a>
+                <ul class="dropdown-content">
+                    <li><a href="aboutus.html">Our Story & Team</a></li>
+                    <li><a href="storelocation.html">Store Location</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#"><b>Contact Us</b></a>
+                <ul class="dropdown-content">
+                    <li><a href="faq.html">FAQ</a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+
+
+        <!-- User Icons -->
+        <div class="user-icons">
+            <a href="signin.html"><i class="fas fa-user"></i></a>
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </nav>
+</header>
+
+<!-- Receipt Container -->
+<div class="receipt-container">
+    <div class="receipt-header">
+		<div class="buttons">
+        <a href="main.html" class="back-button"><i class="fas fa-arrow-left"></i> Back to Homepage</a>
+    </div>
+        <h1>Thank You for Your Purchase! 🛍️</h1>
+        <p class="thank-you-message">Your order has been successfully placed. We’re getting your items ready for shipping!</p>
+    </div>
+
+    <div class="receipt-summary">
+        <h2>Order Summary</h2>
+        <div class="summary-item">
+            <span>iPhone 16 - Teal (512GB)</span>
+            <span>RM 4699.00</span>
+        </div>
+        <div class="summary-item">
+            <span>HP Omen 16</span>
+            <span>RM 5299.00</span>
+        </div>
+        <div class="summary-item">
+            <span>Shipping</span>
+            <span>RM 20.00</span>
+        </div>
+        <div class="summary-item total">
+            <span>Total</span>
+            <span>RM 10,018.00</span>
+        </div>
+    </div>
+
+    <div class="billing-info">
+        <h2>Billing Information</h2>
+        <p><strong>Name:</strong> User </p>
+        <p><strong>Email:</strong> user@google.com</p>
+        <p><strong>Phone:</strong> +60134567890</p>
+        <p><strong>Address:</strong> 1846,Jalan TKP 4 Taman Kelemak Perdana</p>
+        <p><strong>City:</strong> Melaka</p>
+        <p><strong>ZIP Code:</strong> 12345</p>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2024 QibShop. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

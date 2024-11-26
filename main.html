@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QibShop - Gadget Shop</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>	
+
+  <!-- Header and Navigation -->
+  <header>
+    <nav>
+      <img src="LOGO.png" alt="QibShop Logo" class="logo">
+      <ul class="menu">
+        <li><a href="main.html"><b>Home</b></a></li>
+        <li class="dropdown">
+          <a href=""><b>Shop</b></a>
+          <ul class="dropdown-content">
+            <li><a href="shopIphone.html">iPhone</a></li>
+            <li><a href="shopAndroid.html">Android</a></li>
+            <li><a href="shopLaptop.html">Laptop</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href=""><b>About Us</b></a>
+          <ul class="dropdown-content">
+            <li><a href="aboutus.html">Our Story & Team</a></li>
+            <li><a href="storelocation.html">Store Location</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href=""><b>Contact Us</b></a>
+          <ul class="dropdown-content">
+            <li><a href="faq.html">FAQ</a></li>
+            
+          </ul>
+        </li>
+      </ul>
+      
+      <!-- User Icons -->
+      <div class="user-icons">
+        <a href="signin.html"><i class="fas fa-user"></i></a> <!-- Sign-in icon -->
+        <a href="cart.html"><i class="fas fa-shopping-cart"></i></a> <!-- Cart icon -->
+      </div>
+    </nav>
+  </header>
+
+  <!-- Product Banner with Slider -->
+  <section class="product-banner">
+    <div class="slider">
+      <div class="slide active">
+        <img src="iphone.webp" alt="iPhone">
+      </div>
+      <div class="slide">
+        <img src="samsung.jpg" alt="Samsung">
+      </div>
+      <div class="slide">
+        <img src="laptop.jpg" alt="Laptop">
+		</div>
+    </div>
+    <div class="slider-navigation">
+      <span class="prev">&#10094;</span>
+      <span class="next">&#10095;</span>
+    </div>
+  </section>
+	
+	<div class="pic">
+		<h1>New Teaser for the New iPhone</h1>
+		<video width="50%" height="50%" controls>
+			<source src="iphone16pro.mp4" type="video/mp4">
+		</video>
+	</div>
+
+  <section class="products-section">
+    <h1>Check Out Our Products !!</h1>
+    <div class="product-cards">
+      <!-- iPhone Product Card -->
+      <div class="product-card">
+        <img src="iphone.webp" alt="iPhone 16 Pro">
+        <div class="product-info">
+          <span class="new-badge">NEW</span>
+          <h2>iPhone</h2>
+          <p>Profoundly powerful.</p>
+          <p class="price">From RM4,999</p>
+          <a href="shopIphone.html" class="buy-btn">Buy Now</a>
+        </div>
+      </div>
+
+      <!-- Android Product Card -->
+      <div class="product-card">
+        <img src="samsung.jpg" alt="Android Phone">
+        <div class="product-info">
+          <span class="new-badge">NEW</span>
+          <h2>Android Phone</h2>
+          <p>Fast and customizable.</p>
+          <p class="price">From RM2,499</p>
+          <a href="shopAndroid.html" class="buy-btn">Buy Now</a>
+        </div>
+      </div>
+
+      <!-- Laptop Product Card -->
+      <div class="product-card">
+        <img src="laptop.jpg" alt="Laptop">
+        <div class="product-info">
+          <span class="new-badge">NEW</span>
+          <h2>Laptop</h2>
+          <p>Performance beyond limits.</p>
+          <p class="price">From RM4,999</p>
+          <a href="shopLaptop.html" class="buy-btn">Buy Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 QIBSHOP. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Slider -->
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.display = (i === index) ? 'block' : 'none';
+      });
+    }
+
+    function nextSlide() {
+      slideIndex = (slideIndex + 1) % slides.length;
+      showSlide(slideIndex);
+    }
+
+    function prevSlide() {
+      slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+      showSlide(slideIndex);
+    }
+
+    prevButton.addEventListener('click', prevSlide);
+    nextButton.addEventListener('click', nextSlide);
+
+    // Auto slide
+    setInterval(nextSlide, 5000); // 5 seconds interval
+  </script>
+
+</body>
+</html>

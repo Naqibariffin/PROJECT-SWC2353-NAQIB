@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Edit Product</title>
+  <link rel="stylesheet" href="editproduct.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!-- Header and Navigation -->
+<header>
+  <nav>    <img src="LOGO.png" alt="QibShop Logo" class="logo">
+    <ul class="menu">
+      <li><a href="adminprofile.html"><b>Home</b></a></li>
+      <li><a href="manageproduct.html"><b>Manage Product</b></a></li>
+	  <li><a href="manageorder.html"><b>Manage Order</b></a></li>
+      
+    </ul>
+    <div class="user-icons">
+	  <a href="main.html" class="signout-button"><b>Sign Out</b></a>
+    </div>
+  </nav>
+</header>
+
+<!-- Edit Product Section -->
+<main>
+  <div class="edit-product-container">
+    <h1>Edit Product</h1>
+    <form class="edit-product-form" action="updateproduct.html" method="POST" onsubmit="handleUpdate(event)">
+      
+      <!-- Product ID (Hidden) -->
+      <input type="hidden" name="product-id" value="#001">
+      
+      <label for="product-name">Product Name:</label>
+      <input type="text" id="product-name" name="product-name" value="Samsung Galaxy A06 LTE" required>
+
+      <label for="product-category">Category:</label>
+      <select id="product-category" name="category" required>
+        <option value="Android" selected>Android</option>
+        <option value="iPhone">iPhone</option>
+        <option value="Laptop">Laptop</option>
+      </select>
+
+      <label for="product-price">Price (RM):</label>
+      <input type="number" id="product-price" name="price" value="449" required>
+
+      <label for="product-stock">Stock:</label>
+      <select id="product-stock" name="stock" required>
+        <option value="Available" selected>Available</option>
+        <option value="Sold Out">Sold Out</option>
+        <option value="Pre-Order">Pre-Order</option>
+      </select>
+
+      <button type="submit" class="update-btn">Update Product</button>
+    </form>
+  </div>
+</main>
+
+<script>
+ // Function to handle update action
+function handleUpdate(event) {
+  event.preventDefault(); // Prevent the form from submitting normally
+
+  // Show a notification
+  const notification = document.createElement('div');
+  notification.className = 'update-notification';
+  notification.innerHTML = 'Product updated successfully! Redirecting...';
+  document.body.appendChild(notification);
+
+  // Display the notification
+  setTimeout(() => {
+    notification.classList.add('show'); // Add class to make the notification visible
+  }, 100);
+
+  // Show the notification for 5 seconds before redirecting
+  setTimeout(() => {
+    notification.style.display = 'none';
+    window.location.href = 'manageproduct.html'; // Redirect to manageproduct.html
+  }, 3000);
+}
+</script>
+
+<!-- Footer -->
+<footer>
+  <p>© 2024 QIBSHOP. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

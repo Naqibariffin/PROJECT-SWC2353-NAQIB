@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Manage Order</title>
+  <link rel="stylesheet" href="manageorder.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!-- Header and Navigation -->
+<header>
+  <nav>
+    <img src="LOGO.png" alt="QibShop Logo" class="logo">
+    <ul class="menu">
+      <li><a href="adminprofile.html"><b>Home</b></a></li>
+      <li><a href="manageproduct.html"><b>Manage Product</b></a></li>
+      <li><a href="manageorder.html"><b>Manage Order</b></a></li>
+    </ul>
+    <div class="user-icons">
+      <a href="main.html" class="signout-button"><b>Sign Out</b></a>
+    </div>
+  </nav>
+</header>
+
+<!-- Manage Order Section -->
+<main>
+  <div class="manage-order-container">
+    <h1>Manage Orders</h1>
+    <!-- Order Table -->
+    <div class="table-responsive">
+      <table class="order-table">
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Customer Name</th>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Total Price</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Order #1001 -->
+          <tr>
+            <td>#1001</td>
+            <td>Naqib Asyraaf</td>
+            <td>Samsung Galaxy A06 LTE</td>
+            <td>1</td>
+            <td>RM 449</td>
+            <td>Pending</td>
+            <td>
+              <a href="editorder.html" class="edit-btn"><i class="fas fa-edit"></i></a>
+              <button class="delete-btn" onclick="deleteOrder(this)"><i class="fas fa-trash"></i></button>
+            </td>
+          </tr>
+
+          <!-- Order #1002 -->
+          <tr>
+            <td>#1002</td>
+            <td>Nurathrisha Elisa</td>
+            <td>iPhone 16</td>
+            <td>2</td>
+            <td>RM 7,998</td>
+            <td>Shipped</td>
+            <td>
+              <a href="editorder.html" class="edit-btn"><i class="fas fa-edit"></i></a>
+              <button class="delete-btn" onclick="deleteOrder(this)"><i class="fas fa-trash"></i></button>
+            </td>
+          </tr>
+
+          <!-- Order #1003 -->
+          <tr>
+            <td rowspan="2">#1003</td> <!-- Span two rows for one order ID -->
+            <td rowspan="2">User&nbsp;</td>
+            <td>HP Omen Gaming 16</td>
+            <td>1</td>
+            <td>RM 5,299</td>
+            <td rowspan="2">Delivered</td>
+            <td rowspan="2">
+              <a href="editorder.html" class="edit-btn"><i class="fas fa-edit"></i></a>
+              <button class="delete-btn" onclick="deleteOrder(this)"><i class="fas fa-trash"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <td>iPhone 16</td>
+            <td>1</td>
+            <td>RM 4,299</td>
+          </tr>
+
+          <!-- Order #1004 -->
+          <tr>
+            <td>#1004</td>
+            <td>Salman Faris&nbsp;</td>
+            <td>iPhone 16</td>
+            <td>1</td>
+            <td>RM 4,299</td>
+            <td>Delivered</td>
+            <td>
+              <a href="editorder.html" class="edit-btn"><i class="fas fa-edit"></i></a>
+              <button class="delete-btn" onclick="deleteOrder(this)"><i class="fas fa-trash"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer>
+  <p>© 2024 QIBSHOP. All rights reserved.</p>
+</footer>
+
+<script>
+  // Function to handle delete action
+  function deleteOrder(button) {
+    // Get the row of the order to be deleted
+    const orderRow = button.closest('tr');
+
+    // Show a notification
+    const notification = document.createElement('div');
+    notification.className = 'delete-notification';
+    notification.innerHTML = 'Order deleted successfully!';
+    document.body.appendChild(notification);
+
+    // Hide the order row temporarily
+    orderRow.style.display = 'none';
+
+    // Show the notification for 3 seconds before removing it
+    setTimeout(() => {
+      notification.style.display = 'none';
+    }, 3000);
+  }
+</script>
+
+</body>
+</html>

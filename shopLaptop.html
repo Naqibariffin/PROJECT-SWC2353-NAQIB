@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop - QibShop</title> 
+    <link rel="stylesheet" href="shopLaptop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+  <body>  
+
+    <!-- Header and Navigation -->
+    <header>
+      <nav>
+        <img src="LOGO.png" alt="QibShop Logo" class="logo">
+        <ul class="menu">
+          <li><a href="main.html"><b>Home</b></a></li>
+          <li class="dropdown">
+            <a href="#"><b>Shop</b></a>
+            <ul class="dropdown-content">
+              <li><a href="shopIphone.html">Iphone</a></li>
+              <li><a href="shopAndroid.html">Android</a></li>
+              <li><a href="shopLaptop.html">Laptop</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#"><b>About Us</b></a>
+            <ul class="dropdown-content">
+              <li><a href="aboutus.html">Our Story & Team</a></li>
+              <li><a href="storelocation.html">Store Location</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#"><b>Contact Us</b></a>
+            <ul class="dropdown-content">
+              <li><a href="faq.html">FAQ</a></li>
+              
+            </ul>
+          </li>
+        </ul>
+
+        <!-- User Icons -->
+        <div class="user-icons">
+          <a href="signin.html"><i class="fas fa-user"></i></a> <!-- Sign-in icon -->
+          <a href="cart.html"><i class="fas fa-shopping-cart"></i></a> <!-- Cart icon -->
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section for Asus GL502 Series -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1>Asus GL502 Series</h1>
+        <p>Provided with Intel Core i7 6700HQ</p>
+        <p>From RM4,399</p>
+        <a href="#" class="buy-btn sold-out">Sold Out</a>
+      </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+      <button class="filter-btn" onclick="toggleFilter()">Filter <i class="fas fa-filter"></i></button>
+
+      <!-- Filter Options (Initially hidden) -->
+      <div class="filter-options" id="filterOptions" style="display: none;">
+        <h3>Filter by:</h3>
+        <label for="priceFilter">Price:</label>
+        <select id="priceFilter" onchange="filterProducts()">
+          <option value="all">All</option>
+          <option value="under3000">Under RM 3,000</option>
+          <option value="3000to4000">RM 3,000 - RM 4,000</option>
+          <option value="above4000">Above RM 4,000</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Laptop Products List -->
+    <section class="product-list">
+      <div class="product" data-price="2499">
+        <img src="aceraspirelite16.png" alt="Acer Aspire Lite 16">
+        <h2>Acer Aspire Lite 16</h2>
+        <p>Intel i5-1334U</p>
+        <p>From RM 2499</p>
+        <a href="aceraspirelite16.html" class="buy-btn">Buy Now</a>
+      </div>
+      
+      <div class="product" data-price="2959">
+        <img src="hpvictusgaming15.avif" alt="HP Victus Gaming 15">
+        <h2>HP Victus Gaming 15</h2>
+        <p>Intel i5-12450H, RTX2050 4GB</p>
+        <p>From RM 2,959</p>
+        <a href="#" class="buy-btn sold-out">Sold Out</a>
+      </div>
+      
+      <div class="product" data-price="3179">
+        <img src="asusnitrov15.png" alt="Acer Nitro V15">
+        <h2>Acer Nitro V15</h2>
+        <p>Most Powerful Budget Laptop</p>
+        <p>From RM 3,179</p>
+        <a href="acernitrov15.html" class="buy-btn">Buy Now</a>
+      </div>
+      
+      <div class="product" data-price="5299">
+		<div class="badge">Sale</div>
+        <img src="hpomengaming16.png" alt="HP Omen Gaming 16">
+        <h2>HP Omen Gaming 16</h2>
+        <p>RTX4050 6GB</p>
+        <p>
+          <span class="old-price">RM6,799</span><br>
+          <span class="new-price">RM5,299</span>
+        </p>
+        <a href="hpomen16.html" class="buy-btn">Buy Now</a>
+      </div>
+      
+      <div class="product" data-price="4419">
+        <img src="lenovothinkpadE16.png" alt="Lenovo ThinkPad E16">
+        <h2>Lenovo ThinkPad E16 Gen 1</h2>
+        <p>Intel i5-1335U with 16GB RAM</p>
+        <p>From RM 4,419</p>
+        <a href="lenovothinkpadE16.html" class="buy-btn">Buy Now</a>
+      </div>
+    </section>
+
+    <!-- Filter JavaScript -->
+    <script>
+      // Toggle the visibility of the filter options
+      function toggleFilter() {
+        const filterOptions = document.getElementById('filterOptions');
+        filterOptions.style.display = (filterOptions.style.display === 'none' || filterOptions.style.display === '') ? 'block' : 'none';
+      }
+
+      // Filter the product list based on selected price range
+      function filterProducts() {
+        const selectedPrice = document.getElementById('priceFilter').value;
+        const products = document.querySelectorAll('.product');
+
+        products.forEach(product => {
+          const productPrice = parseInt(product.getAttribute('data-price'), 10);
+
+          if (selectedPrice === 'all') {
+            product.style.display = 'block';
+          } else if (selectedPrice === 'under3000' && productPrice < 3000) {
+            product.style.display = 'block';
+          } else if (selectedPrice === '3000to4000' && productPrice >= 3000 && productPrice <= 4000) {
+            product.style.display = 'block';
+          } else if (selectedPrice === 'above4000' && productPrice > 4000) {
+            product.style.display = 'block';
+          } else {
+            product.style.display = 'none';
+          }
+        });
+      }
+    </script>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2024 QIBSHOP. All rights reserved.</p> <!-- Footer content -->
+    </footer>
+
+  </body>
+</html>

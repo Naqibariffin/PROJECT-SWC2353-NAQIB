@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samsung Galaxy A06 - QibShop</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="samsunggalaxyA06.css">
+</head>
+<body>
+  <!-- Header and Navigation -->
+  <header>
+    <nav>
+      <img src="LOGO.png" alt="QibShop Logo" class="logo">
+      <ul class="menu">
+        <li><a href="main.html"><b>Home</b></a></li>
+        <li class="dropdown">
+          <a href=""><b>Shop</b></a>
+          <ul class="dropdown-content">
+            <li><a href="shopIphone.html">iPhone</a></li>
+            <li><a href="shopAndroid.html">Android</a></li>
+            <li><a href="shopLaptop.html">Laptop</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href=""><b>About Us</b></a>
+          <ul class="dropdown-content">
+            <li><a href="aboutus.html">Our Story & Team</a></li>
+            <li><a href="storelocation.html">Store Location</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href=""><b>Contact Us</b></a>
+          <ul class="dropdown-content">
+            <li><a href="faq.html">FAQ</a></li>
+            
+          </ul>
+        </li>
+      </ul>
+      
+      <!-- User Icons -->
+      <div class="user-icons">
+        <a href="signin.html"><i class="fas fa-user"></i></a> <!-- Sign-in icon -->
+        <a href="cart.html"><i class="fas fa-shopping-cart"></i></a> <!-- Cart icon -->
+      </div>
+    </nav>
+  </header>
+
+  <div class="product-section">
+    <div class="slider-section">
+      <div class="slider">
+        <div class="slides">
+          <div class="slide">
+            <img src="samsunggalaxyA06(2).png" alt="Samsung Galaxy A06">
+          </div>
+          <div class="slide">
+            <img src="samsunggalaxyA06(3).png" alt="Samsung Galaxy A06">
+          </div>
+        </div>
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+      </div>
+    </div>
+
+    <div class="product-info">
+      <h1>Samsung Galaxy A06 LTE </h1>
+      <div class="price" id="price">RM 449</div>
+
+      <h2>Select Color:</h2>
+      <p id="selected-color">Selected Color: None</p>
+      <div class="color-options">
+        <button class="color-button" data-color="Light Blue" style="background-color: lightblue;" onclick="selectColor('Light Blue', 449)"></button>
+		<button class="color-button" data-color="Black" style="background-color: black;" onclick="selectColor('Black', 449)"></button>
+      </div>
+	
+
+      <h2>Select Storage:</h2>
+      <p id="selected-storage">Selected Storage:None</p>
+      <div class="storage-options">
+		<button class="storage-button" data-gb="256GB" onclick="selectGB('256GB', 499.99)">256GB</button>
+      </div>
+		
+		  <div class="quantity-selector">
+    <button onclick="changeQuantity(-1)">-</button>
+    <input type="number" id="quantity" value="1" min="1">
+    <button onclick="changeQuantity(1)">+</button>
+  </div>
+
+      <button id="add-to-cart"><b>Add to Cart</b></button>
+    </div>
+	</div>
+	
+
+  <div class="submenu">
+  <ul>
+    <li><a href="#description">Description</a></li>
+	<li><a href="#specifications">Specifications</a></li>
+  </ul>
+</div>
+
+<!-- Description and Specifications Section -->
+<div class="description-specifications">
+  <!-- Description Section -->
+  <div id="description" class="description-box">
+    <h2>Description</h2>
+    <p>The Samsung Galaxy A06 is a value-packed smartphone that offers essential features for those seeking reliability on a budget. With its 6.7-inch PLS LCD display, the phone delivers clear and vibrant visuals at an HD+ resolution. It has a dual-camera system, including a 50 MP main sensor for high-quality photos and a 2 MP depth sensor to add bokeh effects to your portraits. The 8 MP front-facing camera is ideal for selfies and video calls.</p> 
+	<p>Powered by the MediaTek Helio G85 processor, the Galaxy A06 handles everyday tasks smoothly, whether you're browsing, streaming, or using apps. The device comes with 4GB or 6GB of RAM, along with 64GB or 128GB of internal storage, which can be expanded up to 1TB via a dedicated microSD slot. It runs on Android 14 with Samsung’s One UI Core for a clean and efficient software experience. With a 5000mAh battery and 25W fast charging, the Galaxy A06 ensures all-day usage and quick recharging.</p>
+  </div>
+	
+  <br><hr>
+
+  <!-- Specifications Section -->
+  <div id="specifications" class="specifications-box">
+    <h2>Specifications</h2>
+    <ul>
+   <li><strong>Display:</strong> 6.7-inch PLS LCD, 720 x 1600 pixels</li>
+  <li><strong>Processor:</strong> MediaTek Helio G85</li>
+  <li><strong>RAM:</strong> 4GB / 6GB</li>
+  <li><strong>Storage:</strong> 64GB / 128GB (expandable up to 1TB via microSD)</li>
+  <li><strong>Rear Camera:</strong> 50 MP main, 2 MP depth sensor</li>
+  <li><strong>Front Camera:</strong> 8 MP</li>
+  <li><strong>Battery:</strong> 5000mAh with 25W fast charging</li>
+  <li><strong>Operating System:</strong> Android 14 with One UI Core</li>
+  <li><strong>Connectivity:</strong> 4G, Wi-Fi 5, Bluetooth 5.3, USB Type-C</li>
+  <li><strong>Dimensions:</strong> 167.3 x 77.3 x 8 mm, 189 g</li>
+  <li><strong>Colors:</strong> Black,Mint Green</li>
+  <br><br>
+  <img src="samsunggalaxyA06(4).jpg" alt="Samsung Z Flip 5">
+    </ul>
+  </div>
+</div>
+	
+<script>
+    let currentSlide = 0;
+
+    // Mapping of colors to image filenames
+    const colorImageMap = {
+        'Light Blue': 'samsunggalaxyA06(3).png',
+		'Black': 'samsunggalaxyA06(2).png',
+    };
+
+    function changeSlide(direction) {
+        const slides = document.querySelector('.slides');
+        const totalSlides = document.querySelectorAll('.slide').length;
+
+        currentSlide += direction;
+
+        if (currentSlide < 0) {
+            currentSlide = totalSlides - 1; // Loop back to last slide
+        } else if (currentSlide >= totalSlides) {
+            currentSlide = 0; // Loop back to first slide
+        }
+
+        slides.style.transform = `translateX(-${currentSlide * 100}%)`; // Corrected template literal syntax
+    }
+
+    // Function to select color and update price and image
+    function selectColor(color, price) {
+        document.getElementById('selected-color').innerText = `Selected Color: ${color}`;
+        document.getElementById('price').innerText = `RM ${price.toFixed(2)}`;
+
+        // Update the main image displayed in the slider based on the selected color
+        const mainImage = document.querySelector('.slides .slide img'); // Target the main image in the slider
+        mainImage.src = colorImageMap[color]; // Update the image source based on the selected color
+    }
+
+
+    // Function to select storage and update price
+    function selectGB(gb, price) {
+        document.getElementById('selected-storage').innerText = `Selected Storage: ${gb}`;
+        document.getElementById('price').innerText = `RM ${price.toFixed(2)}`;
+    }
+	
+	document.querySelectorAll('.submenu a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+	
+	function changeQuantity(amount) {
+  const quantityInput = document.getElementById('quantity');
+  let currentQuantity = parseInt(quantityInput.value);
+
+  // Adjust quantity
+  currentQuantity += amount;
+
+  // Ensure quantity is at least 1
+  if (currentQuantity < 1) {
+    currentQuantity = 1;
+  }
+
+  // Set new quantity
+  quantityInput.value = currentQuantity;
+}
+
+// Optional: Update the Add to Cart button to use quantity
+document.getElementById('add-to-cart').addEventListener('click', function () {
+  const quantity = document.getElementById('quantity').value;
+  alert(`Added ${quantity} Samsung Galaxy A06 to your cart!`);
+});
+	
+</script>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 QIBSHOP. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

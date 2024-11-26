@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Sign In - QibShop</title> 
+    <link rel="stylesheet" href="adminsignin.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>	
+
+ <!-- Header and Navigation -->
+<header>
+  <nav>
+    <img src="LOGO.png" alt="QibShop Logo" class="logo">
+    <ul class="menu">
+      <li><a href="main.html"><b>Home</b></a></li>
+      <li class="dropdown">
+        <a href=""><b>Shop</b></a>
+        <ul class="dropdown-content">
+          <li><a href="shopIphone.html">Iphone</a></li>
+          <li><a href="shopAndroid.html">Android</a></li>
+          <li><a href="shopLaptop.html">Laptop</a></li>
+        </ul>
+      </li>
+	  <li class="dropdown">
+        <a href=""><b>About Us</b></a>
+        <ul class="dropdown-content">
+          <li><a href="aboutus.html">Our Story & Team</a></li>
+          <li><a href="storelocation.html">Store Location</a></li>
+        </ul>
+      </li>
+	  <li class="dropdown">
+        <a href=""><b>Contact Us </b></a>
+        <ul class="dropdown-content">
+          <li><a href="faq.html">FAQ</a></li>
+          
+        </ul>
+      </li>
+    </ul>
+    
+    <!-- User Icons -->
+    <div class="user-icons">
+      <a href="signin.html"><i class="fas fa-user"></i></a> <!-- Sign-in icon -->
+      <a href="cart.html"><i class="fas fa-shopping-cart"></i></a> <!-- Cart icon -->
+    </div>
+  </nav>
+</header>
+	
+<!-- Centered Sign-Up Form -->
+<div class="center-container">
+    <div class="wrapper">
+      <h2>Admin Sign In</h2>
+      <form action= "adminprofile.html">
+        <div class="input-box">
+          <input type="email" placeholder="Enter your email" required>
+        </div>
+		<br>
+        <div class="input-box">
+          <input type="password" placeholder="Enter your password" required> 
+        </div>
+		<br>
+        <div class="policy">
+          <input type="checkbox">
+          <h3>Remember Me</h3>
+        </div>
+        <div class="input-box button">
+          <input type="submit" value="Sign In">
+        </div>
+        <div class="text">
+          <h3> Are you a customer? <a href="signin.html">Sign In</a></h3>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
+
+<!-- Footer -->
+  <footer>
+    <p>© 2024 QIBSHOP. All rights reserved.</p>
+  </footer>
+

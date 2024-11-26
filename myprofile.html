@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile - QibShop</title>
+  <link rel="stylesheet" href="myprofile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!-- Header and Navigation -->
+  <header>
+    <nav>
+      <img src="LOGO.png" alt="QibShop Logo" class="logo">
+     
+      
+      <!-- User Icons -->
+      <div class="user-icons">
+		<a href="main.html" class="signout-button"><b>Sign Out</b></a>
+      </div>
+    </nav>
+  </header>
+
+<div class="profile-container">
+  <!-- Sidebar Menu -->
+  <div class="sidebar">
+	  <button onclick="showSection('profile-details')"><b>My Profile Details</b></button>
+    <button onclick="showSection('my-orders')"><b>My Orders</b></button>
+  </div>
+
+  <!-- Profile Details Section -->
+  <div id="profile-details" class="profile-section">
+    <div class="profile-details">
+      <h3>My Profile Details</h3>
+      <div class="profile-info">
+        <label>Name:</label>
+        <span id="display-name">User</span>
+        <input type="text" id="input-name" style="display:none;">
+      </div>
+      <div class="profile-info">
+        <label>Email:</label>
+        <span id="display-email">user@gmail.com</span>
+        <input type="email" id="input-email" style="display:none;">
+      </div>
+      <div class="profile-info">
+        <label>Phone:</label>
+        <span id="display-phone">+60134567890</span>
+        <input type="tel" id="input-phone" style="display:none;">
+      </div>
+	  <div class="profile-info">
+        <label>Password:</label>
+        <span id="display-password">********</span>
+        <input type="password" id="input-password" style="display:none;">
+      </div>
+		<button id="edit-button" onclick="toggleEdit(true)"><b>Edit Profile</b></button>
+		<button id="save-button" style="display:none;" onclick="saveProfile()"><b>Save Changes</b></button>
+    </div>
+  </div>
+
+  <!-- My Orders Section -->
+  <div id="my-orders" class="profile-section" style="display: none;">
+    <h3>Recent Orders</h3>
+    <ul class="order-list">
+      <li>Order #1004 - iPhone 16 - Teal (512GB),Omen HP 16 - Delivered</li>
+    </ul>
+  </div>
+</div>
+
+<footer>
+  <p>© 2024 QIBSHOP. All rights reserved.</p>
+</footer>
+
+<script>
+  function showSection(sectionId) {
+    document.querySelectorAll('.profile-section').forEach(section => {
+      section.style.display = 'none';
+    });
+    document.getElementById(sectionId).style.display = 'block';
+  }
+
+  function toggleEdit(isEditing) {
+    const displayElems = document.querySelectorAll('#display-name, #display-email, #display-phone,#display-password');
+    const inputElems = document.querySelectorAll('#input-name, #input-email, #input-phone,#input-password');
+
+    displayElems.forEach(el => el.style.display = isEditing ? 'none' : 'inline');
+    inputElems.forEach(el => el.style.display = isEditing ? 'inline' : 'none');
+
+    document.getElementById('edit-button').style.display = isEditing ? 'none' : 'inline';
+    document.getElementById('save-button').style.display = isEditing ? 'inline' : 'none';
+
+    if (isEditing) {
+      // Populate inputs with current values
+      document.getElementById('input-name').value = document.getElementById('display-name').innerText;
+      document.getElementById('input-email').value = document.getElementById('display-email').innerText;
+      document.getElementById('input-phone').value = document.getElementById('display-phone').innerText;
+	  document.getElementById('display-password').innerText = document.getElementById('input-password').innerText;
+    }
+  }
+
+  function saveProfile() {
+    // Update display values with input values
+    document.getElementById('display-name').innerText = document.getElementById('input-name').value;
+    document.getElementById('display-email').innerText = document.getElementById('input-email').value;
+    document.getElementById('display-phone').innerText = document.getElementById('input-phone').value;
+	document.getElementById('display-password').innerText = document.getElementById('input-password').value;
+
+    // Toggle back to view mode
+    toggleEdit(false);
+  }
+</script>
+
+</body>
+</html>

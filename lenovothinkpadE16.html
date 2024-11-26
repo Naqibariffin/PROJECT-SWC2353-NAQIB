@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lenovo Thinkpad E16 - QibShop</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="lenovothinkpadE16.css">
+</head>
+<body>
+  <!-- Header and Navigation -->
+  <header>
+    <nav>
+      <img src="LOGO.png" alt="QibShop Logo" class="logo">
+      <ul class="menu">
+        <li><a href="main.html"><b>Home</b></a></li>
+        <li class="dropdown">
+          <a href=""><b>Shop</b></a>
+          <ul class="dropdown-content">
+            <li><a href="shopIphone.html">iPhone</a></li>
+            <li><a href="shopAndroid.html">Android</a></li>
+            <li><a href="shopLaptop.html">Laptop</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href=""><b>About Us</b></a>
+          <ul class="dropdown-content">
+            <li><a href="aboutus.html">Our Story & Team</a></li>
+            <li><a href="storelocation.html">Store Location</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href=""><b>Contact Us</b></a>
+          <ul class="dropdown-content">
+            <li><a href="faq.html">FAQ</a></li>
+            
+          </ul>
+        </li>
+      </ul>
+      
+      <!-- User Icons -->
+      <div class="user-icons">
+        <a href="signin.html"><i class="fas fa-user"></i></a> <!-- Sign-in icon -->
+        <a href="cart.html"><i class="fas fa-shopping-cart"></i></a> <!-- Cart icon -->
+      </div>
+    </nav>
+  </header>
+
+  <div class="product-section">
+    <div class="slider-section">
+      <div class="slider">
+        <div class="slides">
+          <div class="slide">
+            <img src="lenovothinkpadE16(1).png" alt="Lenovo Thinkpad E16">
+          </div>
+          <div class="slide">
+            <img src="lenovothinkpadE16(2).png" alt="Lenovo Thinkpad E16">
+          </div>
+          <div class="slide">
+            <img src="lenovothinkpadE16(3).png" alt="Lenovo Thinkpad E16">
+          </div>
+          <div class="slide">
+            <img src="lenovothinkpadE16(4).png" alt="Lenovo Thinkpad E16">
+          </div>
+        </div>
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+      </div>
+    </div>
+
+    <div class="product-info">
+      <h1>Lenovo Thinkpad E16 </h1>
+		<h2>⚡Features⚡</h2>
+		<p>- 16-inch IPS display, 1920 x 1200</p>
+        <p>- Fast charging battery</p>
+        <p>- Upgradable RAM Slot</p>
+      <div class="price" id="price">RM 4419</div>
+		
+		  <div class="quantity-selector">
+    <button onclick="changeQuantity(-1)">-</button>
+    <input type="number" id="quantity" value="1" min="1">
+    <button onclick="changeQuantity(1)">+</button>
+  </div>
+
+      <button id="add-to-cart"><b>Add to Cart</b></button>
+    </div>
+	</div>
+	
+
+  <div class="submenu">
+  <ul>
+    <li><a href="#description">Description</a></li>
+    <li><a href="#specifications">Specifications</a></li>
+  </ul>
+</div>
+
+<!-- Description and Specifications Section -->
+<div class="description-specifications">
+  <!-- Description Section -->
+  <div id="description" class="description-box">
+    <h2>Description</h2>
+    <p>The Lenovo ThinkPad E16 is a versatile business laptop designed for productivity and performance. It features a 16-inch IPS display with a resolution of 1920 x 1200 pixels, providing clear visuals and vibrant colors. The laptop is powered by the latest Intel or AMD processors, ensuring smooth multitasking and efficient performance. With up to 40GB of RAM and various SSD storage options, it meets the needs of demanding users. Built with durability in mind, the ThinkPad E16 is equipped with a robust chassis and a comfortable keyboard, making it suitable for extended work sessions.</p>
+  </div>
+	
+  <br><hr>
+
+  <!-- Specifications Section -->
+  <div id="specifications" class="specifications-box">
+    <h2>Specifications</h2>
+    <ul>
+  <li><strong>Display:</strong> 16-inch IPS, 1920 x 1200 pixels</li>
+  <li><strong>Processor:</strong> Intel Core i3/i5/i7 or AMD Ryzen 3/5/7</li>
+  <li><strong>RAM:</strong> Up to 40GB DDR4</li>
+  <li><strong>Storage:</strong> Up to 2TB SSD (PCIe NVMe)</li>
+  <li><strong>Graphics:</strong> Integrated Intel UHD or NVIDIA GeForce MX550</li>
+  <li><strong>Battery:</strong> 47Wh / 57Wh, fast charging</li>
+  <li><strong>Operating System:</strong> Windows 11 Pro</li>
+  <li><strong>Connectivity:</strong> Wi-Fi 6E, Bluetooth 5.2, USB-C, HDMI</li>
+  <li><strong>Weight:</strong> Approximately 1.76 kg (3.88 lbs)</li>
+  <li><strong>Dimensions:</strong> 356.1 x 247.5 x 19.85 mm</li>
+</ul>
+  </div>
+</div>
+	
+<script>
+    let currentSlide = 0;
+
+    function changeSlide(direction) {
+        const slides = document.querySelector('.slides');
+        const totalSlides = document.querySelectorAll('.slide').length;
+
+        currentSlide += direction;
+
+        if (currentSlide < 0) {
+            currentSlide = totalSlides - 1; // Loop back to last slide
+        } else if (currentSlide >= totalSlides) {
+            currentSlide = 0; // Loop back to first slide
+        }
+
+        slides.style.transform = `translateX(-${currentSlide * 100}%)`; // Corrected template literal syntax
+    }
+
+
+	document.querySelectorAll('.submenu a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+	
+	function changeQuantity(amount) {
+  const quantityInput = document.getElementById('quantity');
+  let currentQuantity = parseInt(quantityInput.value);
+
+  // Adjust quantity
+  currentQuantity += amount;
+
+  // Ensure quantity is at least 1
+  if (currentQuantity < 1) {
+    currentQuantity = 1;
+  }
+
+  // Set new quantity
+  quantityInput.value = currentQuantity;
+}
+
+// Optional: Update the Add to Cart button to use quantity
+document.getElementById('add-to-cart').addEventListener('click', function () {
+  const quantity = document.getElementById('quantity').value;
+ alert(`Added ${quantity} Lenovo ThinkPad E16 to your cart!`);
+});
+	
+</script>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 QIBSHOP. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
